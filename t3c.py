@@ -33,8 +33,8 @@ def run_discord_bot(bot_token):
         channel = str(message.channel)
         print(f'{username} said: "{user_message}" ({channel})')
 
-    @bot.command(name='help', aliases=['help'])
-    async def mochihelp_command(ctx):
+    @bot.command(name='help', aliases=['helpus'])
+    async def help_command(ctx):
         embed = discord.Embed(title='TO THE RESCUE!', description='List of available commands & phrases:', color=discord.Color.yellow())
 
         # Commands
