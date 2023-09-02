@@ -10,12 +10,30 @@ TOKEN = os.getenv("DISCORD_TOKEN")  # Token grabber
 intents = discord.Intents.default()
 intents.message_content = True
 
-bot = commands.Bot(command_prefix='!', intents=intents)  # Initialize commands.Bot with intents
+bot = commands.Bot(command_prefix='!', case_insensitive=True, intents=intents)  # Initialize commands.Bot with intents
 
 @bot.command(name='test')
 async def test_command(ctx):
     await ctx.send("This is a test")
 
+
+@bot.command(name='info')
+async def info_command(ctx):
+
+    if ctx.message.content[6:].lower() == 'quincy':
+        await ctx.send("This is information")
+    elif ctx.message.content[6:].lower() == 'obyn':
+        await ctx.send("This is information")
+    elif ctx.message.content[6:].lower() == 'gwen':
+        await ctx.send("This is information")
+    elif ctx.message.content[6:].lower() == 'pat':
+        await ctx.send("This is information information")
+    elif ctx.message.content[6:].lower() == 'ben':
+        await ctx.send("This is information information")
+    elif ctx.message.content[6:].lower() == 'sauda':
+        await ctx.send("This is information information")
+    else:
+        await ctx.send("Please type in a hero's name after **Info** for example `!info Obyn`")
 async def send_message(message, user_message, is_private):
     try:
         response = responses.get_response(user_message)
