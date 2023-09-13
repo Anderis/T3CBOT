@@ -1,13 +1,20 @@
 import discord
+import pytz
 import responses
 import os
+import heroes
+import base64
+import interactions
+import asyncio
+from discord.ui import Button, View
 from dotenv import load_dotenv
 from discord.ext import commands
+from heroes import get_hero_info, get_hero_cost
 
 load_dotenv()  # Load environment variables from .env file
 TOKEN = os.getenv("DISCORD_TOKEN")  # Token grabber
 
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', case_insensitive=True, intents=intents)  # Initialize commands.Bot with intents
@@ -16,64 +23,76 @@ bot = commands.Bot(command_prefix='!', case_insensitive=True, intents=intents)  
 async def test_command(ctx):
     await ctx.send("This is a test")
 
-@bot.command(name='info')
-async def info_command(ctx, hero_name: str = None):
-    if hero_name:
-        hero_name = hero_name.lower()  # Convert input to lowercase
+class ButtonTest(discord.ui.View):
+    def __init__(self, initial_message, initial_embed):
+        super().__init__(timeout=None)
+        self.initial_message = initial_message
+        self.initial_embed = initial_embed
 
-        # Define hero aliases
-        hero_aliases = {
-            'quincy': ['quinc', 'quin', 'q'],
-            'obyn': ['oby', 'o'],
-            'gwen': ['g', 'gwendolyn'],
-            'pat': ['fusty', 'pat fusty', 'p', 'pf'],
-            'ben': ['benjamin', 'benjy', 'benj', 'be', 'benny'],
-            'sauda': ['s'],
-            'brickell': ['brick', 'admiral', 'admiral brickell', 'ab', 'adm'],
-            'adora': ['dora', 'ado'],
-            'churchill': ['captain', 'captain churchill', 'c'],
-            'ezili': ['ez'],
-            'ettiene': ['etn', 'et'],
-            'jones': ['striker', 'striker jones', 'sj', 'st', 'j']
-        }
-
-        # Check for heroes and aliases
-        for hero, aliases in hero_aliases.items():
-            if hero_name == hero or hero_name in aliases:
-                # Add specific information for each hero/alias
-                if hero == 'quincy':
-                    await ctx.send("This is information about Quincy.")
-                elif hero == 'obyn':
-                    await ctx.send("This is information about Obyn.")
-                elif hero == 'gwen':
-                    await ctx.send("This is information about Gwen.")
-                elif hero == 'pat':
-                    await ctx.send("This is information about Pat.")
-                elif hero == 'ben':
-                    await ctx.send("This is information about Ben.")
-                elif hero == 'sauda':
-                    await ctx.send("This is information about Sauda.")
-                elif hero == 'brickell':
-                    await ctx.send("This is information about Brickell.")
-                elif hero == 'adora':
-                    await ctx.send("This is information about Adora.")
-                elif hero == 'churchill':
-                    await ctx.send("This is information about Churchill.")
-                elif hero == 'ezili':
-                    await ctx.send("This is information about Ezili.")
-                elif hero == 'ettiene':
-                    await ctx.send("This is information about Ettiene.")
-                elif hero == 'jones':
-                    await ctx.send("This is information about Jones.")
-                return  # Exit the loop if a match is found
-
-        # If no match found
-        await ctx.send("I don't have information about that hero.")
-    else:
-        await ctx.send("Please type in a hero's name after **info**. For example: `!info Obyn`")
+    @discord.ui.button(label="Hero Stats", style=discord.ButtonStyle.blurple)
+    async def test_hero_stats(self, interaction: discord.Interaction, button: discord.ui.Button):
+        # Modify the existing embed with HeroStats information
+        self.initial_embed.title = "HeroStats Button Clicked"
+        self.initial_embed.description = "This is the HeroStats button."
 
 
 
+        # Reply to the interaction with the updated embed (ephemeral=True)
+        await interaction.response.send_message(embed=self.initial_embed, ephemeral=True)
+
+    @discord.ui.button(label="Strategy", style=discord.ButtonStyle.blurple)
+    async def test_strategy(self, interaction: discord.Interaction, button: discord.ui.Button):
+        # Modify the existing embed with Strategy information
+        self.initial_embed.title = "Strategy Button Clicked"
+        self.initial_embed.description = "This is the Strategy button."
+
+
+        # Reply to the interaction with the updated embed (ephemeral=True)
+        await interaction.response.send_message(embed=self.initial_embed, ephemeral=True)
+
+
+@bot.command(name="info")
+async def buttonmenu(ctx, hero_name: str):
+    if hero_name is None:
+        await ctx.send("Please provide a hero's name after **buttonmenu**. For example: `!buttonmenu Obyn`")
+        return
+
+    hero_info = get_hero_info(hero_name)
+
+    if hero_info:
+        # Fetch the cost information for the hero using the get_hero_cost function
+        cost_info = get_hero_cost(hero_name)
+
+        description = ''  # Initialize an empty description string
+
+        if cost_info:
+            # Include the cost information in the description above the main description
+            description += f"**COST:**\n{cost_info}\n\n"
+
+        # Append the main description
+        description += hero_info['description']
+
+        embed = discord.Embed(
+            title=hero_info['title'],
+            description=description,
+            color=hero_info['color']
+        )
+
+        # Get the image URL for the hero from hero_data
+        image_url = hero_info.get('image_url', '')
+
+        if image_url:
+            embed.set_thumbnail(url=image_url)  # Set the image URL as the embed's thumbnail
+
+        # Create an instance of the ButtonTest class
+        button_test = ButtonTest(ctx.message, embed)  # Pass the message and embed to the constructor
+
+        # Send the initial embed with the buttons from the ButtonTest instance
+        await ctx.send(embed=embed, view=button_test)
+
+async def main():
+    async with bot:
+        await bot.start("")
 
 async def send_message(message, user_message, is_private):
     try:
@@ -84,6 +103,7 @@ async def send_message(message, user_message, is_private):
 
 @bot.event
 async def on_ready():
+    await bot.tree.sync()
     print(f'{bot.user} is now running!')
 
 @bot.event
@@ -93,10 +113,26 @@ async def on_message(message):
 
     username = str(message.author)
     user_message = str(message.content)
-    channel = str(message.channel)
 
-    print(f'{username} said: "{user_message}" in ({channel})')
-    if user_message[0] == '?':
+    if message.guild:  # Check if the message was sent in a server
+        channel = f"#{message.channel}"
+        location = f"in {channel}"
+    else:
+        location = "in private DMs"
+
+    # Convert UTC time to EST timezone
+    est_timezone = pytz.timezone('US/Eastern')
+    utc_time = message.created_at.replace(tzinfo=pytz.UTC)
+    est_time = utc_time.astimezone(est_timezone)
+
+    timestamp = est_time.strftime("%Y-%m-%d %H:%M:%S")  # Format the timestamp
+
+    if message.guild:
+        print(f'{username} said: "{user_message}" in "{message.guild.name} #{message.channel.name}", at {timestamp}')
+    else:
+        print(f'{username} said: "{user_message}" in DMs at {timestamp}')
+
+    if user_message.startswith('?'):
         user_message = user_message[1:]
         await send_message(message, user_message, is_private=True)
     else:
