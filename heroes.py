@@ -31,8 +31,8 @@ hero_data = {
 
 
 hero_costs = {
-        'quincy': '**Easy**: $550(495)    **Medium**: $650(585)\n**Hard**: $700(630)  **Impoppable**: $780(730)',
-        'obyn': '**Easy**: $550(495)    **Medium**: $650(585)\n**Hard**: $700(630)  **Impoppable**: $780(730)',
+        'quincy': 'Easy: $550(495)  Medium: $650(585)\nHard: $700(630)  Impoppable: $780(730)',
+        'obyn': 'Easy: [2;32m[2;33m$550[0m[2;32m[0m([2;32m495[0m)  Medium:     [2;32m[2;33m$650[0m[2;32m[0m([2;32m585[0m)\nHard: [2;33m$700[0m([2;32m630[0m)  Impoppable: [2;33m$780[0m([2;32m730[0m)',
         # Add cost information for other heroes here
 }
 

@@ -32,8 +32,8 @@ class ButtonTest(discord.ui.View):
     @discord.ui.button(label="Hero Stats", style=discord.ButtonStyle.blurple)
     async def test_hero_stats(self, interaction: discord.Interaction, button: discord.ui.Button):
         # Modify the existing embed with HeroStats information
-        self.initial_embed.title = "HeroStats Button Clicked"
-        self.initial_embed.description = "This is the HeroStats button."
+        self.initial_embed.title = ""
+        self.initial_embed.description = "# HERO DATA\n\n## **Stats(Max)**\nPierce:20\nDamage:20\nAttack-Speed:0.5s"
 
 
 
@@ -45,9 +45,7 @@ class ButtonTest(discord.ui.View):
         # Modify the existing embed with Strategy information
         self.initial_embed.title = "Strategy Button Clicked"
         self.initial_embed.description = "This is the Strategy button."
-
-
-        # Reply to the interaction with the updated embed (ephemeral=True)
+       # Reply to the interaction with the updated embed (ephemeral=True)
         await interaction.response.send_message(embed=self.initial_embed, ephemeral=True)
 
 
@@ -63,17 +61,17 @@ async def buttonmenu(ctx, hero_name: str):
         # Fetch the cost information for the hero using the get_hero_cost function
         cost_info = get_hero_cost(hero_name)
 
-        description = ''  # Initialize an empty description string
+        description = f"## **{hero_info['title']}**\n\n"
 
         if cost_info:
             # Include the cost information in the description above the main description
-            description += f"**COST:**\n{cost_info}\n\n"
+            description += f"```ansi\n[1;2mHERO COST[0m\n{cost_info}\n```\n"
 
         # Append the main description
         description += hero_info['description']
 
         embed = discord.Embed(
-            title=hero_info['title'],
+            title='',
             description=description,
             color=hero_info['color']
         )
