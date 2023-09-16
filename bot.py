@@ -65,7 +65,7 @@ async def buttonmenu(ctx, hero_name: str):
 
         if cost_info:
             # Include the cost information in the description above the main description
-            description += f"```ansi\n[1;2mHERO COST[0m\n{cost_info}\n```\n"
+            description += f"🔓 **Unlocked at** Level 28 🔓\n```ansi\n\n[1;2mSPECIALTY[0m\nSupport/Crowd-Control\n\n[1;2mHERO COST[0m\n{cost_info}\n```\n"
 
         # Append the main description
         description += hero_info['description']
