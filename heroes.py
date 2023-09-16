@@ -1,99 +1,130 @@
 hero_aliases = {
     'quincy': ['quinc', 'quin', 'q'],
     'obyn': ['oby', 'o'],
-    'gwen': ['g', 'gwendolyn'],
-    'pat': ['fusty', 'pat fusty', 'p', 'pf'],
+    'gwen': ['gw', 'gwendolyn'],
+    'pat': ['fusty', 'pat fusty', 'pa', 'pf'],
     'ben': ['benjamin', 'benjy', 'benj', 'be', 'benny'],
-    'sauda': ['s'],
+    'sauda': ['s','sa','saud','sau'],
     'brickell': ['brick', 'admiral', 'admiral brickell', 'ab', 'adm'],
     'adora': ['dora', 'ado'],
     'churchill': ['captain', 'captain churchill', 'c'],
     'ezili': ['ez'],
     'ettiene': ['etn', 'et'],
-    'jones': ['striker', 'striker jones', 'sj', 'st', 'j']
+    'jones': ['striker', 'striker jones', 'sj', 'st', 'j'],
+    'geraldo': ['ge','gerald','ger','geer'',gerado','gerad','gerada'],
+    'psi': ['ps']
 }
 
 hero_data = {
     'quincy': {
         'title': 'QUINCY',
-        'description': 'This is information about Quincy.',
+        'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Quincy.png',
-        'color': 0xF77709  # Set the color code for Quincy
+        'color': 0xF77709 
     },
     'obyn': {
-        'title': '**OBYN GREENFOOT**',
-        'description': 'This is information about Obyn.',
+        'title': 'OBYN GREENFOOT',
+        'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Obyn.png',
-        'color': 0x1D6FA8  # Set the color code for Obyn
+        'color': 0x1D6FA8  
     },
     'gwen': {
-        'title': 'Gwendolyn',
-        'description': 'This is information about Quincy.',
+        'title': 'GWENDOLIN',
+        'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Gwen.png',
-        'color': 0xF77709  # Set the color code for Quincy
+        'color': 0xE65554
 
     },
     'pat': {
         'title': 'PAT FUSTY',
-        'description': 'This is information about Quincy.',
+        'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Pat.png',
-        'color': 0xF77709  # Set the color code for Quincy
+        'color': 0xF3C10E
     },
     'ben': {
         'title': 'BENJAMIN',
-        'description': 'This is information about Quincy.',
+        'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Ben.png',
-        'color': 0xF77709  # Set the color code for Quincy
+        'color': 0x217200
     },
     'sauda': {
-        'title': 'QUINCY',
-        'description': 'This is information about Quincy.',
+        'title': 'SAUDA',
+        'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Sauda.png',
-        'color': 0xF77709  # Set the color code for Quincy
+        'color': 0x185F99
     },
     'brickell': {
-        'title': 'QUINCY',
-        'description': 'This is information about Quincy.',
+        'title': 'ADMIRAL BRICKELL',
+        'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Brickell.png',
-        'color': 0xF77709  # Set the color code for Quincy
+        'color': 0xF2F3F5
     },
     'adora': {
-        'title': 'QUINCY',
-        'description': 'This is information about Quincy.',
+        'title': 'ADORA',
+        'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Adora.png',
-        'color': 0xF77709  # Set the color code for Quincy
+        'color': 0xF77709
     },
     'churchill': {
-        'title': 'QUINCY',
-        'description': 'This is information about Quincy.',
+        'title': 'CAPTAIN CHURCHILL',
+        'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Churchill.png',
-        'color': 0xF77709  # Set the color code for Quincy
+        'color': 0xF77709 
     },
     'ezili': {
-        'title': 'QUINCY',
-        'description': 'This is information about Quincy.',
+        'title': 'EZILI',
+        'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Ezili.png',
-        'color': 0xF77709  # Set the color code for Quincy
+        'color': 0xF77709 
     },
-    'ettiene': {
-        'title': 'QUINCY',
-        'description': 'This is information about Quincy.',
-        'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Quincy.png',
-        'color': 0xF77709  # Set the color code for Quincy
+    'ettienne': {
+        'title': 'ETIENNE',
+        'description': '',
+        'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Etn.png',
+        'color': 0xF77709 
     },
     'jones': {
-        'title': 'QUINCY',
-        'description': 'This is information about Quincy.',
+        'title': 'STRIKER JONES',
+        'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Jones.png',
-        'color': 0xF77709  # Set the color code for Quincy
+        'color': 0xF77709 
+    },
+    'geraldo': {
+        'title': 'GERALDO',
+        'description': '',
+        'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Geraldo.png',
+        'color': 0xF77709 
+    },
+
+    'psi': {
+        'title': 'PSI',
+        'description': '',
+        'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Psi.png',
+        'color': 0xF77709 
     }
-    # Add more heroes here with their respective color codes
 }
 
 
 hero_costs = {
-        'quincy': 'Easy: $550(495)  Medium: $650(585)\nHard: $700(630)  Impoppable: $780(730)',
-        'obyn': 'Easy: [2;32m[2;33m$550[0m[2;32m[0m([2;32m495[0m)  Medium:     [2;32m[2;33m$650[0m[2;32m[0m([2;32m585[0m)\nHard: [2;33m$700[0m([2;32m630[0m)  Impoppable: [2;33m$780[0m([2;32m730[0m)',
+        'quincy': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$455[0m[2;32m[0m([2;32m410[0m)  Medium:     [2;32m[2;33m$540[0m[2;32m[0m([2;32m485[0m)\nHard: [2;33m$585[0m([2;32m525[0m)  Impoppable: [2;33m$650[0m([2;32m585[0m)',
+        'obyn': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$550[0m[2;32m[0m([2;32m495[0m)  Medium:     [2;32m[2;33m$650[0m[2;32m[0m([2;32m585[0m)\nHard: [2;33m$700[0m([2;32m630[0m)  Impoppable: [2;33m$780[0m([2;32m730[0m)',
+        'gwen': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$615[0m[2;32m[0m([2;32m555[0m)  Medium:     [2;32m[2;33m$725[0m[2;32m[0m([2;32m655[0m)\nHard: [2;33m$785[0m([2;32m710[0m)  Impoppable: [2;33m$870[0m([2;32m785[0m)',
+        'pat': '',
+        'ben': '',
+        'sauda': '',
+        'brickell': '',
+        'adora': '',
+        'churchill': '',
+        'ezili': '',
+        'ettiene': '',
+        'jones': '',
+        'geraldo': '',
+        'psi': ''
+}
+
+hero_stats = {
+        'quincy': '',
+        'obyn': '',
         'gwen': '',
         'pat': '',
         'ben': '',
@@ -103,14 +134,15 @@ hero_costs = {
         'churchill': '',
         'ezili': '',
         'ettiene': '',
-        'jones': ''
-        # Add cost information for other heroes here
+        'jones': '',
+        'geraldo': '',
+        'psi': ''
 }
 
-hero_stats = {
-        'quincy': '# HERO DATA\n\n## **Stats(Max)**\nPierce:20\nDamage:20\nAttack-Speed:0.5s',
-        'obyn': '# HERO DATA\n\n## **Stats(Max)**\nPierce:20\nDamage:20\nAttack-Speed:0.5s',
-        'gwen': '# HERO DATA\n\n## **Stats(Max)**\nPierce:20\nDamage:20\nAttack-Speed:0.5s',
+hero_unlock = {
+        'quincy': '🔓 **Unlocked** For Free 🔓',
+        'obyn': '🔓 **Unlocked at** Level 28 🔓',
+        'gwen': '🔓 **Unlocked at** Level 14 🔓',
         'pat': 'Pierce 10',
         'ben': 'Pierce 10',
         'sauda': 'Pierce 10',
@@ -119,7 +151,26 @@ hero_stats = {
         'churchill': 'Pierce 10',
         'ezili': 'Pierce 10',
         'ettiene': 'Pierce 10',
-        'jones': 'Pierce 10'
+        'jones': 'Pierce 10',
+        'geraldo': '',
+        'psi': '',
+}
+
+hero_specialty = {
+        'quincy': '[1;2mSPECIALTY[0m\nDPS/Wave-Clear\n\n',
+        'obyn': '[1;2mSPECIALTY[0m\nCrowd-Control/Support\n\n',
+        'gwen': '[1;2mSPECIALTY[0m\nDPS/Support\n\n',
+        'pat': 'Pierce 10',
+        'ben': 'Pierce 10',
+        'sauda': 'Pierce 10',
+        'brickell': 'Pierce 10',
+        'adora': 'Pierce 10',
+        'churchill': 'Pierce 10',
+        'ezili': 'Pierce 10',
+        'ettiene': 'Pierce 10',
+        'jones': 'Pierce 10',
+        'geraldo': '',
+        'psi': ''
 }
 
 def get_hero_info(hero_name):
@@ -128,23 +179,32 @@ def get_hero_info(hero_name):
     # Check if the input matches a hero name or alias
     for hero, aliases in hero_aliases.items():
         if hero_name == hero or hero_name in aliases:
-            return hero_data.get(hero)
+            return hero_data.get(hero, None)
 
     # If no hero or alias matches, return None
     return None
 
 def get_hero_cost(hero_name):
-    # Convert the hero_name to lowercase to handle case-insensitive queries
     hero_name = hero_name.lower()
 
-    # Check if the hero_name partially matches any hero name or alias
-    matching_heroes = []
     for hero, aliases in hero_aliases.items():
         if hero_name == hero or hero_name in aliases:
-            matching_heroes.append(hero)
+            return hero_costs.get(hero, None)
 
-    if matching_heroes:
-        # If there are matching heroes, return the cost information for the first matching hero found
-        return hero_costs.get(matching_heroes[0])
+def get_hero_unlock(hero_name):
+    hero_name = hero_name.lower()
 
-    return None  # Return None if cost information is not available for the partial match
+    for hero, aliases in hero_aliases.items():
+        if hero_name == hero or hero_name in aliases:
+            return hero_unlock.get(hero, None)
+
+    return None
+
+def get_hero_specialty(hero_name):
+    hero_name = hero_name.lower()
+
+    for hero, aliases in hero_aliases.items():
+        if hero_name == hero or hero_name in aliases:
+            return hero_specialty.get(hero, None)
+
+    return None

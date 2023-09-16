@@ -9,7 +9,7 @@ import asyncio
 from discord.ui import Button, View
 from dotenv import load_dotenv
 from discord.ext import commands
-from heroes import get_hero_info, get_hero_cost
+from heroes import get_hero_info, get_hero_cost, get_hero_unlock, get_hero_specialty
 
 load_dotenv()  # Load environment variables from .env file
 TOKEN = os.getenv("DISCORD_TOKEN")  # Token grabber
@@ -56,6 +56,8 @@ async def buttonmenu(ctx, hero_name: str):
         return
 
     hero_info = get_hero_info(hero_name)
+    hero_unlock = get_hero_unlock(hero_name)
+    hero_specialty = get_hero_specialty(hero_name)
 
     if hero_info:
         # Fetch the cost information for the hero using the get_hero_cost function
@@ -65,7 +67,7 @@ async def buttonmenu(ctx, hero_name: str):
 
         if cost_info:
             # Include the cost information in the description above the main description
-            description += f"🔓 **Unlocked at** Level 28 🔓\n```ansi\n\n[1;2mSPECIALTY[0m\nSupport/Crowd-Control\n\n[1;2mHERO COST[0m\n{cost_info}\n```\n"
+            description += f"{hero_unlock}\n```ansi\n\n{hero_specialty}{cost_info}\n```\n"
 
         # Append the main description
         description += hero_info['description']
