@@ -9,7 +9,7 @@ hero_aliases = {
     'adora': ['dora', 'ado'],
     'churchill': ['captain', 'captain churchill', 'c'],
     'ezili': ['ez,ezi,ezil'],
-    'ettiene': ['etn', 'et'],
+    'etienne': ['etn', 'et'],
     'jones': ['striker', 'striker jones', 'sj', 'st', 'j'],
     'geraldo': ['ge','gerald','ger','geer'',gerado','gerad','gerada'],
     'psi': ['ps']
@@ -63,7 +63,7 @@ hero_data = {
         'title': 'ADORA',
         'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Adora.png',
-        'color': 0xF77709
+        'color': 0xEB9708
     },
     'churchill': {
         'title': 'CAPTAIN CHURCHILL',
@@ -77,11 +77,11 @@ hero_data = {
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Ezili.png',
         'color': 0x6441AA 
     },
-    'ettienne': {
+    'etienne': {
         'title': 'ETIENNE',
         'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Etn.png',
-        'color': 0xF77709 
+        'color': 0x9CAF10
     },
     'jones': {
         'title': 'STRIKER JONES',
@@ -112,11 +112,11 @@ hero_costs = {
         'pat':  '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$680[0m[2;32m[0m([2;32m610[0m)  Medium:     [2;32m[2;33m$800[0m[2;32m[0m([2;32m720[0m)\nHard: [2;33m$865[0m([2;32m780[0m)  Impoppable: [2;33m$960[0m([2;32m865[0m)',
         'ben': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$1,020[0m[2;32m[0m([2;32m920[0m) Medium: [2;32m[2;33m$1,200[0m[2;32m[0m([2;32m1,080[0m)\nHard: [2;33m$1,295[0m([2;32m1,165[0m) Impoppable: [2;33m$1,440[0m([2;32m1,295[0m)',
         'sauda': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$510[0m[2;32m[0m([2;32m460[0m)  Medium:     [2;32m[2;33m$600[0m[2;32m[0m([2;32m540[0m)\nHard: [2;33m$650[0m([2;32m585[0m)  Impoppable: [2;33m$720[0m([2;32m650[0m)',
-        'brickell': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$765[0m[2;32m[0m([2;32m690[0m) Medium:     [2;32m[2;33m$900[0m[2;32m[0m([2;32m810[0m)\nHard: [2;33m$970[0m([2;32m875[0m) Impoppable: [2;33m$1080[0m([2;32m970[0m)',
-        'adora': '',
+        'brickell': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$765[0m[2;32m[0m([2;32m690[0m) Medium:     [2;32m[2;33m$900[0m[2;32m[0m([2;32m810[0m)\nHard: [2;33m$970[0m([2;32m875[0m) Impoppable: [2;33m$1,080[0m([2;32m970[0m)',
+        'adora': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$850[0m[2;32m[0m([2;32m765[0m)   Medium:     [2;32m[2;33m$1,000[0m[2;32m[0m([2;32m900[0m)\nHard: [2;33m$1,080[0m([2;32m970[0m) Impoppable: [2;33m$1,200[0m([2;32m1,080[0m)',
         'churchill': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$1,700[0m[2;32m[0m([2;32m1,530[0m) Medium: [2;32m[2;33m$2,000[0m[2;32m[0m([2;32m1,800[0m)\nHard: [2;33m$2,160[0m([2;32m1,945[0m) Impoppable: [2;33m$2,400[0m([2;32m2,160[0m)',
         'ezili': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$510[0m[2;32m[0m([2;32m460[0m)  Medium:     [2;32m[2;33m$600[0m[2;32m[0m([2;32m540[0m)\nHard: [2;33m$650[0m([2;32m585[0m)  Impoppable: [2;33m$720[0m([2;32m650[0m)',
-        'ettiene': '',
+        'etienne': '',
         'jones': '',
         'geraldo': '',
         'psi': ''
@@ -133,7 +133,7 @@ hero_stats = {
         'adora': '',
         'churchill': '',
         'ezili': '',
-        'ettiene': '',
+        'etienne': '',
         'jones': '',
         'geraldo': '',
         'psi': ''
@@ -150,7 +150,7 @@ hero_unlock = {
         'adora': '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓',
         'churchill': '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>2,500 🔓',
         'ezili': '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>3,000 🔓',
-        'ettiene': '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓',
+        'etienne': '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓',
         'jones': 'Pierce 10',
         'geraldo': '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓',
         'psi': '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓',
@@ -167,7 +167,7 @@ hero_specialty = {
         'adora': '[1;2mSPECIALTY[0m\nWave-Clear/DPS\n\n',
         'churchill': '[1;2mSPECIALTY[0m\nBurst/DPS\n\n',
         'ezili': '[1;2mSPECIALTY[0m\nDOT/Burst\n\n',
-        'ettiene': 'Pierce 10',
+        'etienne': 'Pierce 10',
         'jones': 'Pierce 10',
         'geraldo': '',
         'psi': ''
