@@ -87,7 +87,7 @@ hero_data = {
         'title': 'STRIKER JONES',
         'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Jones.png',
-        'color': 0xF77709 
+        'color': 0x476B08
     },
     'geraldo': {
         'title': 'GERALDO',
@@ -116,7 +116,7 @@ hero_costs = {
         'adora': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$850[0m[2;32m[0m([2;32m765[0m)   Medium:     [2;32m[2;33m$1,000[0m[2;32m[0m([2;32m900[0m)\nHard: [2;33m$1,080[0m([2;32m970[0m) Impoppable: [2;33m$1,200[0m([2;32m1,080[0m)',
         'churchill': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$1,700[0m[2;32m[0m([2;32m1,530[0m) Medium: [2;32m[2;33m$2,000[0m[2;32m[0m([2;32m1,800[0m)\nHard: [2;33m$2,160[0m([2;32m1,945[0m) Impoppable: [2;33m$2,400[0m([2;32m2,160[0m)',
         'ezili': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$510[0m[2;32m[0m([2;32m460[0m)  Medium:     [2;32m[2;33m$600[0m[2;32m[0m([2;32m540[0m)\nHard: [2;33m$650[0m([2;32m585[0m)  Impoppable: [2;33m$720[0m([2;32m650[0m)',
-        'etienne': '',
+        'etienne': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$650[0m[2;32m[0m([2;32m650[0m)  Medium:     [2;32m[2;33m$850[0m[2;32m[0m([2;32m765[0m)\nHard: [2;33m$920[0m([2;32m825[0m)  Impoppable: [2;33m$1,020[0m([2;32m920[0m)',
         'jones': '',
         'geraldo': '',
         'psi': ''
@@ -167,7 +167,7 @@ hero_specialty = {
         'adora': '[1;2mSPECIALTY[0m\nWave-Clear/DPS\n\n',
         'churchill': '[1;2mSPECIALTY[0m\nBurst/DPS\n\n',
         'ezili': '[1;2mSPECIALTY[0m\nDOT/Burst\n\n',
-        'etienne': 'Pierce 10',
+        'etienne': '[1;2mSPECIALTY[0m\nDPS/Support\n\n',
         'jones': 'Pierce 10',
         'geraldo': '',
         'psi': ''
