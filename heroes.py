@@ -93,14 +93,14 @@ hero_data = {
         'title': 'GERALDO',
         'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Geraldo.png',
-        'color': 0xF77709 
+        'color': 0xD2C149
     },
 
     'psi': {
         'title': 'PSI',
         'description': '',
         'image_url': 'https://raw.githubusercontent.com/Anderis/T3CBOT/main/Assets/heroes/Psi.png',
-        'color': 0xF77709 
+        'color': 0x4422F1
     }
 }
 
@@ -118,8 +118,8 @@ hero_costs = {
         'ezili':     '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$510[0m[2;32m[0m([2;32m460[0m)  Medium:     [2;32m[2;33m$600[0m[2;32m[0m([2;32m540[0m)\nHard: [2;33m$650[0m([2;32m585[0m)  Impoppable: [2;33m$720[0m([2;32m650[0m)',
         'etienne':   '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$650[0m[2;32m[0m([2;32m650[0m)  Medium:     [2;32m[2;33m$850[0m[2;32m[0m([2;32m765[0m)\nHard: [2;33m$920[0m([2;32m825[0m)  Impoppable: [2;33m$1,020[0m([2;32m920[0m)',
         'jones':     '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$650[0m[2;32m[0m([2;32m650[0m)  Medium:     [2;32m[2;33m$850[0m[2;32m[0m([2;32m765[0m)\nHard: [2;33m$920[0m([2;32m825[0m)  Impoppable: [2;33m$1,020[0m([2;32m920[0m)',
-        'geraldo': '',
-        'psi': ''
+        'geraldo':   '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$595[0m[2;32m[0m([2;32m545[0m)  Medium:     [2;32m[2;33m$700[0m[2;32m[0m([2;32m640[0m)\nHard: [2;33m$755[0m([2;32m690[0m)  Impoppable: [2;33m$840[0m([2;32m770[0m)',
+        'psi':       '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$850[0m[2;32m[0m([2;32m765[0m)    Medium:       [2;32m[2;33m$1,000[0m[2;32m[0m([2;32m900[0m)\nHard: [2;33m$1,080[0m([2;32m970[0m)  Impoppable: [2;33m$1,200[0m([2;32m1,080[0m)',
 }
 
 hero_stats = {
