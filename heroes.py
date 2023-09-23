@@ -117,7 +117,7 @@ hero_costs = {
         'churchill': '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$1,700[0m[2;32m[0m([2;32m1,530[0m) Medium: [2;32m[2;33m$2,000[0m[2;32m[0m([2;32m1,800[0m)\nHard: [2;33m$2,160[0m([2;32m1,945[0m) Impoppable: [2;33m$2,400[0m([2;32m2,160[0m)',
         'ezili':     '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$510[0m[2;32m[0m([2;32m460[0m)  Medium:     [2;32m[2;33m$600[0m[2;32m[0m([2;32m540[0m)\nHard: [2;33m$650[0m([2;32m585[0m)  Impoppable: [2;33m$720[0m([2;32m650[0m)',
         'etienne':   '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$650[0m[2;32m[0m([2;32m650[0m)  Medium:     [2;32m[2;33m$850[0m[2;32m[0m([2;32m765[0m)\nHard: [2;33m$920[0m([2;32m825[0m)  Impoppable: [2;33m$1,020[0m([2;32m920[0m)',
-        'jones': '',
+        'jones':     '[1;2mHERO COST[0m\nEasy: [2;32m[2;33m$650[0m[2;32m[0m([2;32m650[0m)  Medium:     [2;32m[2;33m$850[0m[2;32m[0m([2;32m765[0m)\nHard: [2;33m$920[0m([2;32m825[0m)  Impoppable: [2;33m$1,020[0m([2;32m920[0m)',
         'geraldo': '',
         'psi': ''
 }
@@ -141,8 +141,9 @@ hero_stats = {
 
 hero_unlock = {
         'quincy':    '🔓 **Unlocked** For Free 🔓',
-        'obyn':      '🔓 **Unlocked at** Level 28 🔓',
         'gwen':      '🔓 **Unlocked at** Level 14 🔓',
+        'jones':     '🔓 **Unlocked at** Level 21 🔓',
+        'obyn':      '🔓 **Unlocked at** Level 28 🔓',       
         'churchill': '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>2,500 🔓',
         'pat':       '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>3,000 🔓',
         'ben':       '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>3,000 🔓',
@@ -150,8 +151,7 @@ hero_unlock = {
         'sauda':     '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓',
         'brickell':  '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓',
         'adora':     '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓',
-        'etienne':   '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓',
-        'jones':     'Pierce 10',
+        'etienne':   '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓', 
         'geraldo':   '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓',
         'psi':       '🔓 **Unlocked at** Level 10 • <:monkeymoney:1152454348413079563>5,000 🔓',
 }
@@ -167,44 +167,37 @@ hero_specialty = {
         'adora':     '[1;2mSPECIALTY[0m\nWave-Clear/DPS\n\n',
         'churchill': '[1;2mSPECIALTY[0m\nBurst/DPS\n\n',
         'ezili':     '[1;2mSPECIALTY[0m\nDOT/Burst\n\n',
-        'etienne':   '[1;2mSPECIALTY[0m\nDPS/Support\n\n',
-        'jones': 'Pierce 10',
-        'geraldo': '',
-        'psi': ''
+        'etienne':   '[1;2mSPECIALTY[0m\nWave-Clear/Support\n\n',
+        'jones':     '[1;2mSPECIALTY[0m\nBurst/Support\n\n',
+        'geraldo':   '[1;2mSPECIALTY[0m\nSupport/DPS\n\n',
+        'psi':       '[1;2mSPECIALTY[0m\nCrowd-Control/Burst\n\n',
 }
 
 def get_hero_info(hero_name):
     hero_name = hero_name.lower()  # Convert input to lowercase
-
     # Check if the input matches a hero name or alias
     for hero, aliases in hero_aliases.items():
         if hero_name == hero or hero_name in aliases:
             return hero_data.get(hero, None)
-
     # If no hero or alias matches, return None
     return None
 
 def get_hero_cost(hero_name):
     hero_name = hero_name.lower()
-
     for hero, aliases in hero_aliases.items():
         if hero_name == hero or hero_name in aliases:
             return hero_costs.get(hero, None)
 
 def get_hero_unlock(hero_name):
     hero_name = hero_name.lower()
-
     for hero, aliases in hero_aliases.items():
         if hero_name == hero or hero_name in aliases:
             return hero_unlock.get(hero, None)
-
     return None
 
 def get_hero_specialty(hero_name):
     hero_name = hero_name.lower()
-
     for hero, aliases in hero_aliases.items():
         if hero_name == hero or hero_name in aliases:
             return hero_specialty.get(hero, None)
-
     return None
